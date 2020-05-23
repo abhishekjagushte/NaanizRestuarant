@@ -3,10 +3,12 @@ package com.naaniz.naanizrestuarant.ui.restuarant.main.fragments.home;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.naaniz.naanizrestuarant.R;
 
@@ -54,12 +56,22 @@ public class HomeFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        View view =  inflater.inflate(R.layout.fragment_home, container, false);
+
+
+        //Example for navigating to anaother fragment************
+//        Button button = view.findViewById(R.id.button);
+//        button.setOnClickListener(v -> {
+//            Navigation.findNavController(v).navigate(R.id.action_homeFragment_to_collectionDemoFragment);
+//        });
+
+        return view;
     }
 }

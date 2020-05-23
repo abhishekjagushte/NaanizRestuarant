@@ -9,7 +9,11 @@
         android:id="@+id/homeFragment"
         android:name="com.naaniz.naanizrestuarant.ui.restuarant.main.fragments.home.HomeFragment"
         android:label="@string/home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_collectionDemoFragment"
+            app:destination="@id/collectionDemoFragment" />
+    </fragment>
     <fragment
         android:id="@+id/customersFragment"
         android:name="com.naaniz.naanizrestuarant.ui.restuarant.main.fragments.customers.CustomersFragment"
@@ -25,4 +29,8 @@
         android:name="com.naaniz.naanizrestuarant.ui.restuarant.main.fragments.profile.ProfileFragment"
         android:label="@string/profile"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/collectionDemoFragment"
+        android:name="com.naaniz.naanizrestuarant.ui.restuarant.main.fragments.test.CollectionDemoFragment"
+        android:label="CollectionDemoFragment" />
 </navigation>
